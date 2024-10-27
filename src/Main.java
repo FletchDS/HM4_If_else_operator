@@ -81,19 +81,14 @@ public class Main {
         int two = random.nextInt(-100, 101);
         int three = random.nextInt(-100, 101);
 
-        System.out.printf("\n\nДаны три числа: %d %d %d)", one, two, three);
+        System.out.printf("\n\nДаны три числа: %d %d %d\n", one, two, three);
 
-        if (one > two) {
-            int temp = one;
-            one = two;
-            two = temp;
+        if (one >= two && one >= three) {
+            System.out.printf("%d самое большое из них", one);
+        } else if (two >= one && two >= three) {
+            System.out.printf("%d самое большое из них", two);
+        } else {
+            System.out.printf("%d самое большое из них", three);
         }
-        if (two > three) {
-            int temp = two;
-            two = three;
-            three = temp;
-        }
-
-        System.out.printf("\nСамое большое из них %d", three);
     }
 }
